@@ -1,5 +1,6 @@
 import { createStackNavigator } from "react-navigation-stack";
 
+// Components
 import CoffeeList from "../Components/CoffeeList";
 import CoffeeDetail from "../Components/CoffeeDetail";
 import CoffeeCart from "../Components/CoffeeCart";
@@ -10,12 +11,10 @@ const StackNav = createStackNavigator(
   {
     ListScreen: CoffeeList,
     DetailScreen: CoffeeDetail,
-    CartScreen: CoffeeCart,
-    Login: Login,
-    Signup: Signup
+    CartScreen: CoffeeCart
   },
   {
-    initialRouteName: "Login",
+    initialRouteName: "ListScreen",
     defaultNavigationOptions: {
       headerTintColor: "white",
       headerStyle: {
