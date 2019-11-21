@@ -5,7 +5,6 @@ import { observer } from "mobx-react";
 import { List, Content, Button, Text, Spinner } from "native-base";
 
 // Stores
-import authStore from "../../Stores/authStore";
 import coffeeStore from "../../Stores/coffeeStore";
 
 // Component

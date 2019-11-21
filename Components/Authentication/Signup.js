@@ -7,6 +7,15 @@ import { Text } from "native-base";
 import styles from "./styles";
 
 class Signup extends Component {
+  state = {
+    username: "",
+    password: ""
+  };
+
+  handlePress = () => {
+    authStore.signup(this.state);
+  };
+
   render() {
     return (
       <View style={styles.authContainer}>
@@ -15,12 +24,14 @@ class Signup extends Component {
           style={styles.authTextInput}
           placeholder="Username"
           placeholderTextColor="#A6AEC1"
+          onChangeText={value => this.setState({ username: value })}
         />
         <TextInput
           style={styles.authTextInput}
           placeholder="Password"
           placeholderTextColor="#A6AEC1"
           secureTextEntry={true}
+          onChangeText={password => this.setState({ password })}
         />
         <TouchableOpacity
           style={styles.authButton}
